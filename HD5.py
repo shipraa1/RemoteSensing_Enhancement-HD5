@@ -19,7 +19,7 @@ def dct_local_detail_enhancement(image):
 
 # Load HDF5 file
 with h5py.File('C:/Users/Dell/OneDrive/Desktop/hd5/3RIMG_06APR2023_2315_L1C_ASIA_MER_V01R00.hdf5', 'r') as file:
-    image_data = file['IMG_MIR'][:]  # Assuming the dataset is named 'data'
+    image_data = file['IMG_TIR'][:]  # Assuming the dataset is named 'data'
 
 # Remove the extra dimension if present
 if len(image_data.shape) == 3 and image_data.shape[0] == 1:
